@@ -9,9 +9,9 @@ const ShareEventModal = ({ event, closeModal }) => {
 	const [copied, setCopied] = useState(false);
 	const handleCopy = () => setCopied(true);
 	const router = useRouter();
-	// const registerUrl = event.data
-	// 	? `gitkalink/register/${event.id}/${event.data.slug}`
-	// 	: `https://eventad.vercel.app/register/${router.query.id}/${event.slug}`;
+	const registerUrl = event.data
+	 	? `https://event-ad.vercel.app/register/${event.id}/${event.data.slug}`
+	 	: `https://event-ad.vercel.app/register/${router.query.id}/${event.slug}`;
 
 	return (
 		<div className='w-full h-[100vh] dim absolute top-0 left-0 flex items-center justify-center p-4  z-40'>
